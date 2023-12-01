@@ -7,7 +7,6 @@ window_width = 500
 window_height = 750
 # draw window
 game_screen = pygame.display.set_mode((window_width, window_height))
-startClock = pygame.time.Clock()
 clock = pygame.time.Clock()
 pygame.display.set_caption("Rising Slime")
 font = pygame.font.Font(None, 40)
@@ -145,7 +144,7 @@ def start_page():
         draw_text('PLAY', font, (0, 0, 0), game_screen, 215, 413)
         draw_text('How To Play', font, (0, 0, 0), game_screen, 168, 513)
         pygame.display.update()
-        startClock.tick(60)
+        clock.tick(60)
 
 
 def game():
