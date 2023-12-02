@@ -209,8 +209,6 @@ def game():
                     if input_box.collidepoint(event.pos):
                         # Toggle the active variable.
                         active = not active
-                    elif button_2.collidepoint(event.pos) and username == '':
-                        pass
                     elif button_2.collidepoint(event.pos) and username != '':
                         start_page()
                     else:
@@ -245,9 +243,6 @@ def game():
                 game_screen.blit(high_score_text, (80, 240))
                 draw_text("You have set a new Hi-Score!", font, (255, 255, 255), game_screen, 40, 280)
                 draw_text("Enter a username: ", font, (255, 255, 255), game_screen, 20, 320)
-                pygame.draw.rect(game_screen, (0, 255, 0), button_2)
-                # writing text on top of button
-                draw_text('Menu', font, (0, 0, 0), game_screen, 215, 463)
             elif username != '':
                 with open('Hi-score_holder.txt', 'w') as holder:
                     json.dump(username, holder)
